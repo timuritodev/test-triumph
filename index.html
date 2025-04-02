@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<title>TinyMCE Test Assignment</title>
+	<style>
+		body {
+			display: flex;
+			margin: 0;
+			font-family: sans-serif;
+			height: 100vh;
+		}
+
+		#main {
+			flex: 3;
+			padding: 10px;
+			display: flex;
+			flex-direction: column;
+		}
+
+		#toolbar {
+			margin-bottom: 10px;
+		}
+
+		#editor-container {
+			flex: 1;
+		}
+
+		#sidebar {
+			flex: 1;
+			padding: 10px;
+			border-left: 1px solid #ccc;
+			background: #f9f9f9;
+		}
+
+		#template-list {
+			max-height: 300px;
+			overflow-y: auto;
+			border: 1px solid #ddd;
+			padding: 5px;
+		}
+
+		.template-item {
+			padding: 5px;
+			cursor: pointer;
+		}
+
+		.template-item.selected {
+			background: #ddd;
+		}
+
+		#edit-template {
+			margin-top: 10px;
+			width: 100%;
+			box-sizing: border-box;
+		}
+
+		.special-component select {
+			width: 150px;
+			z-index: 1000;
+			position: relative;
+			background: white;
+			pointer-events: all !important;
+		}
+
+		.mce-content-body:focus {
+			outline: none !important;
+		}
+	</style>
+<script defer src="bundle.js"></script></head>
+
+<body>
+	<div id="main">
+		<div id="toolbar">
+			<button id="insert-btn">Insert</button>
+		</div>
+		<div id="editor-container">
+			<textarea id="editor"></textarea>
+		</div>
+	</div>
+	<div id="sidebar">
+		<h3>Templates</h3>
+		<div id="template-list"></div>
+		<div style="margin-top:10px;">
+			<button id="add-template">+</button>
+			<button id="remove-template">-</button>
+		</div>
+		<input type="text" id="edit-template" placeholder="Edit template" />
+	</div>
+	<script type="module" src='index.js' />
+</body>
+
+</html>

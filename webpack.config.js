@@ -7,18 +7,9 @@ module.exports = {
 	output: {
 		filename: 'bundle.js',
 		path: path.resolve(__dirname, 'dist'),
-		publicPath: '/test-triumph/',
+		publicPath: '/test-triumph/', // соответствует homepage
 	},
-	mode: 'development',
-	devServer: {
-		static: {
-			directory: path.join(__dirname, '/'),
-		},
-		compress: true,
-		port: 9000,
-		open: true,
-		hot: true,
-	},
+	mode: 'production',
 	module: {
 		rules: [
 			{
@@ -35,6 +26,7 @@ module.exports = {
 		new HtmlWebpackPlugin({ template: './index.html' }),
 		new CopyWebpackPlugin({
 			patterns: [
+				// Ресурсы TinyMCE будут доступны по адресу /test-triumph/tinymce/...
 				{ from: 'node_modules/tinymce/skins', to: 'tinymce/skins' },
 				{ from: 'node_modules/tinymce/models', to: 'tinymce/models' },
 			],

@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>TinyMCE Test Assignment</title>
+	<title>Test Triumph</title>
 	<style>
 		body {
 			display: flex;
@@ -55,18 +55,6 @@
 			width: 100%;
 			box-sizing: border-box;
 		}
-
-		.special-component select {
-			width: 150px;
-			z-index: 1000;
-			position: relative;
-			background: white;
-			pointer-events: all !important;
-		}
-
-		.mce-content-body:focus {
-			outline: none !important;
-		}
 	</style>
 <script defer src="bundle.js"></script></head>
 
@@ -88,7 +76,7 @@
 		</div>
 		<input type="text" id="edit-template" placeholder="Edit template" />
 	</div>
-	<script type="module" src='index.js' />
+	<script src="./bundle.js"></script> <!-- Убрал type="module" -->
 </body>
 
 </html>

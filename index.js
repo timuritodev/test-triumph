@@ -1,7 +1,7 @@
 import tinymce from 'tinymce/tinymce';
 window.tinymce = tinymce;
 
-tinymce.baseURL = '/tinymce';
+tinymce.baseURL = 'https://timuritodev.github.io/test-triumph/tinymce';
 
 import 'tinymce/icons/default';
 import 'tinymce/plugins/code';
